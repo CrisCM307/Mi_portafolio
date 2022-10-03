@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.flex-header{
+    background-color: #7E52DE;
+    padding: 2rem;
+    flex-basis: 0%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    color: black;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flex-main{
+    background-color: #d7e0e6; 
+    
+    flex-basis: 0%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    opacity: 0.9;
+    flex-direction: row;
+}
+.flex-nav{
+    background-color: #c5c2ce;
+    color:rgb(33, 34, 34);
+    flex-basis: 0%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* padding: 7px; */
+    color: black;
+    
+}
+.barra {
+    font-family: 'Lato', sans-serif;
+    /**Alto y ancho de donde se va a activar cuando pase el mouse**/
+    width:10%;
+    height:9%;
+    /*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
+    
+    /*Tiempo en el que va a transitar la animacion*/
+    transition: .4s all ;
+    /*este arriba de todo en la pantalla*/
+    z-index: 1;  
+}
+
+.barra ul{
+    /*solucionar espacios no deseados*/
+    padding:0px;
+    text-align: center;
+        
+}
+.barra  li{
+    /*Velocidad de transicion del contenido*/
+    transition:all .3s;
+    list-style: none; 
+}
+
+.barra a{
+    text-decoration: none;
+    
+    font-weight: normal;
+    
+    /*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
+    transition: .3s all ;
+    /*Se ocultan los elementos*/
+    font-size: 0px;
+    padding:0px;
+}
+
+.barra  h2{
+    text-align: center;
+    color:white;
+    padding:7px;
+    padding-bottom:7px;
+
+    /*Se oculta el h2*/
+    font-size:0px;   
+}
+
+.barra img{
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+.barra:hover{
+    /*Tamaño cuando el cursor señale la barra*/
+    width: 60%;
+    height: 100vh;
+    
+    /*Color*/
+    background: rgba(118, 120, 121, 0.98);
+}
+.barra:hover h2{
+    /*posicion dentro de barra del h2*/
+    padding:7px;
+    font-size: 35px;
+}
+.barra:hover a{ 
+    font-size:20px ;
+    color:white;
+    /*Se usa el display block para que el enlace respete el margin*/
+    display: block;
+    padding:20px;
+}
+.barra:hover img{
+    /*Desaparecer la imagen*/
+    height:0px;
+}
+
+
+.barra:hover li{
+    border-top:1px solid #03121b;
+    /*Espacios entre las lineas y el contenido*/
+    
+    width:100%;
+        
+}
+.barra:hover ul:last-of-type{
+
+
+    border-bottom: 1px solid #03121b;
+}
+
+.barra:hover a:hover{ 
+    font-size: 25px;
+    padding: 30px 0px; 
+    background: rgba(45, 45, 46, 0.98);  
+}
+
+@media (min-width: 768px){
+    .barra:hover{
+    width: 45%;
+    }
+}
+.flex-article{
+    background-color: #cdcad4;
+    flex-basis: 0%;
+    flex-grow: 4;
+    flex-shrink: 1;
+    color: black;
+    padding: 20px;
+}
+.flex-aside{
+    background-color:#a48fd1;
+    flex-basis: 0%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    opacity: 0.99;
+    padding: 10px;
+}
+.flex-footer{
+    padding: 3rem;
+    background-color:#372461;
+    flex-basis: 0%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    color: white;
+    opacity: 0.97;
+    
+}
+
+
+
+@media (max-width: 450px){
+    .flex-main{
+        flex-direction: column;
+    }
+}
+h3{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2,h4{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #a6a6a8;
+    padding: 10px;
+    margin: 0;
+}
+table{
+    text-align: left;
+    width: 95%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th{
+    color: black;
+    font-size: 30px;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td{
+    color: black;
+    font-size: 20px;
+    padding: 30px;
+}
+
+thead{
+    border-bottom: solid 0px;
+    color: black;
+  
+}
+p{
+    float: left;
+}
+
+
