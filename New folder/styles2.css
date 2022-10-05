@@ -1,0 +1,112 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    width: 100%;
+    height: 75px;
+    background-color: rgb(23, 46, 38);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+}
+.main{
+    background-color: #2a343e;
+    position: fixed;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.logo{
+    float: left;
+    line-height: 75px;
+}
+.logo h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 24px;
+    cursor: default;
+}
+.menu{
+    float: right;
+    line-height: 75px;
+}
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    line-height: normal;
+    font-size: 14px;
+    transition: all 500ms ease;
+    border-bottom: 4px solid transparent;
+
+}
+.menu a:hover{
+    color: rgb(42, 46, 165);
+    border-bottom: 4px solid  rgb(42, 46, 165);
+}
+#btn-menu{
+    display: none;
+}
+.boton{
+    float: right;
+    display: none;
+}
+.boton label{
+    color: #fff;
+    background: #2a343e;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    .header{
+        height: 60px;
+    }
+    .logo, .boton{
+        line-height: 60px;
+    }
+    .logo h1{
+        font-size: 17px;
+    }
+    .menu a:hover{
+        color: rgb(42, 46, 165);
+        border-bottom: 4px solid  rgb(42, 46, 165);
+    }
+    .menu{
+        position: absolute;
+        background-color: bisque;
+        width: 100%;
+        height: 100vh;
+        top: 60px;
+        left: 0;
+        transition: all 500ms ease;
+        transform: translateX(-100%);
+    }
+    #btn-menu:checked ~ .menu{
+        transform: translateX(0%);
+    }
+    .menu a{
+        display: block;
+        margin-top: 10px ;
+    }
+    .boton{
+        display: block;
+    }
+}
+body{
+    background-color: yellowgreen;
+}
+footer{
+    background-color: black;
+}
